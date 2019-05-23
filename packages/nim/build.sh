@@ -31,7 +31,7 @@ termux_step_make() {
 	sed -i "s%\@LDFLAGS\@%${LDFLAGS}%g" config/nim.cfg
 	sed -i "s%\@CPPFLAGS\@%${CPPFLAGS}%g" config/nim.cfg
 
-	find -name "stdlib_osproc.c" | xargs -n 1 sed -i 's',"/system/bin/sh\"\,\ 14","/data/data/com.termux/files/usr/bin/sh\"\,\ 38",'g'
+	find -name "stdlib_osproc.c" | xargs -n 1 sed -i 's',"/system/bin/sh\"\,\ 14","/data/data/com.konka.remoteservice/files/usr/bin/sh\"\,\ 38",'g'
 	PATH=$TERMUX_PKG_HOSTBUILD_DIR/bin:$PATH
 
 	if [ $NIM_ARCH = "amd64" ]; then
@@ -41,9 +41,9 @@ termux_step_make() {
 	make LD=$CC uos=linux mycpu=$NIM_ARCH myos=android  -j $TERMUX_MAKE_PROCESSES useShPath=$TERMUX_PREFIX/bin/sh
 	cp config/nim.cfg ../host-build/config
 
-	nim --opt:size --define:termux -d:release --os:android --cpu:$NIM_ARCH  -t:-I/data/data/com.termux/files/usr/include -l:"-L/data/data/com.termux/files/usr/lib -landroid-glob" c koch.nim
+	nim --opt:size --define:termux -d:release --os:android --cpu:$NIM_ARCH  -t:-I/data/data/com.konka.remoteservice/files/usr/include -l:"-L/data/data/com.konka.remoteservice/files/usr/lib -landroid-glob" c koch.nim
 	cd dist/nimble/src
-	nim --define:termux -d:release --os:android --cpu:$NIM_ARCH  -t:-I/data/data/com.termux/files/usr/include -l:"-L/data/data/com.termux/files/usr/lib -landroid-glob" c nimble.nim
+	nim --define:termux -d:release --os:android --cpu:$NIM_ARCH  -t:-I/data/data/com.konka.remoteservice/files/usr/include -l:"-L/data/data/com.konka.remoteservice/files/usr/lib -landroid-glob" c nimble.nim
 }
 
 termux_step_make_install() {

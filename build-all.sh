@@ -1,6 +1,6 @@
 #!/bin/bash
 # build-all.sh - script to build all packages with a build order specified by buildorder.py
-
+export http_proxy=127.0.0.1:8118
 set -e -u -o pipefail
 
 # Read settings from .termuxrc if existing

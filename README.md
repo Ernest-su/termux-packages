@@ -38,7 +38,7 @@ grep termux-packages-24 $PREFIX/etc/apt/sources.list
 ```
 It should output the line containing this URL:
 ```
-https://dl.bintray.com/termux/termux-packages-24/
+https://dl.bintray.com.konka.remoteservice/termux-packages-24/
 ```
 If not, then it is time to upgrade your installation. This procedure will involve complete erasing of `$PREFIX`, directory where all packages are installed (aka rootfs) but your home directory will be untouched.
 
@@ -58,7 +58,7 @@ So if you decided to upgrade your installation, do the following steps:
 
 We welcome any pull requests. Nevertheless, a log file should be provided in order to show that it is at least working.
 
-All pull requests will be built by [Cirrus CI](https://cirrus-ci.com/termux/termux-packages). Usually, it is expected that all tasks will pass. But do not worry if CI build timed out. Alternatively, you can provide build logs by yourself.
+All pull requests will be built by [Cirrus CI](https://cirrus-ci.com.konka.remoteservice/termux-packages). Usually, it is expected that all tasks will pass. But do not worry if CI build timed out. Alternatively, you can provide build logs by yourself.
 
 Note that it is highly recommended to keep your pull requests up-to-date. If you do not know how to do this, take a look on manpage of `git-rebase`.
 

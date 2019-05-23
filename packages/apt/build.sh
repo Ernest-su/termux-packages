@@ -37,7 +37,7 @@ lib/libapt-inst.so
 "
 
 termux_step_post_make_install() {
-	printf "# The main termux repository:\ndeb https://dl.bintray.com/termux/termux-packages-24 stable main\n" > $TERMUX_PREFIX/etc/apt/sources.list
+	printf "# The main termux repository:\ndeb https://dl.bintray.com.konka.remoteservice/termux-packages-24 stable main\n" > $TERMUX_PREFIX/etc/apt/sources.list
 	cp $TERMUX_PKG_BUILDER_DIR/trusted.gpg $TERMUX_PREFIX/etc/apt/
 	rm $TERMUX_PREFIX/include/apt-pkg -r
 

@@ -1,4 +1,5 @@
 termux_download() {
+	#export http_proxy=http://127.0.0.1:8118/
 	if [ $# != 3 ]; then
 		termux_error_exit "termux_download(): Invalid arguments - expected \$URL \$DESTINATION \$CHECKSUM"
 	fi

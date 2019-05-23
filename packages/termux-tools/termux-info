@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/sh
+#!/data/data/com.konka.remoteservice/files/usr/bin/sh
 
 
 if [ "$#" != "0" ]; then

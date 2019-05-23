@@ -5,7 +5,7 @@ TERMUX_PKG_DEPENDS="libcrypt, openssl"
 TERMUX_PKG_VERSION=18.12.27
 TERMUX_PKG_SHA256=13669b17e726b00e3f73578b817a47bc9ebd6b2fc962894489730dc0b6c06f43
 # We use our bintray mirror since old version snapshots are not kept on main site.
-TERMUX_PKG_SRCURL=https://dl.bintray.com/termux/upstream/picolisp_${TERMUX_PKG_VERSION}.tar.gz
+TERMUX_PKG_SRCURL=https://dl.bintray.com.konka.remoteservice/upstream/picolisp_${TERMUX_PKG_VERSION}.tar.gz
 TERMUX_PKG_BUILD_IN_SRC=true
 # arm and i686: The c code uses gcc-specific "variable length array in structure":
 # x86_64: The assembly is not position-independent:

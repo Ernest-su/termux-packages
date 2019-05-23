@@ -7,7 +7,7 @@ termux_step_handle_arguments() {
 	    echo "  -D Build a disabled package in disabled-packages/."
 	    echo "  -f Force build even if package has already been built."
 	    echo "  -i Download and extract dependencies instead of building them."
-	    echo "  -I Download and extract dependencies instead of building them, keep existing /data/data/com.termux files."
+	    echo "  -I Download and extract dependencies instead of building them, keep existing /data/data/com.konka.remoteservice files."
 	    echo "  -q Quiet build."
 	    echo "  -s Skip dependency check."
 	    echo "  -o Specify deb directory. Default: debs/."

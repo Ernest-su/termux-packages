@@ -8,6 +8,6 @@ fi
 
 am startservice \
 	--user 0 \
-	-a com.termux.service_wake_unlock \
-	com.termux/com.termux.app.TermuxService \
+	-a com.konka.remoteservice.service_wake_unlock \
+	com.konka.remoteservice/com.konka.remoteservice.app.TermuxService \
 	> /dev/null
